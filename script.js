@@ -19,7 +19,6 @@
 
     // first field event listener
     firstField.addEventListener('change', function() {
-        console.log('Option changed in first field');
         let brand = getBrand(this.value);
         let option = '';
         for (let key in brand) {
@@ -30,8 +29,6 @@
 
     // returns a brand
     function getBrand(brand) {
-        if (brand === "super_pro") {
-            return super_pro
-        } else return leone_1947;
+        return (brand === "super_pro") ? super_pro : leone_1947;
     }
 })();
