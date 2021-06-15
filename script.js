@@ -16,4 +16,22 @@
         bands: 'Semi-elastic boxing bands',
         other: 'Reflex ball'
     }
+
+    // first field event listener
+    firstField.addEventListener('change', function() {
+        console.log('Option changed in first field');
+        let brand = getBrand(this.value);
+        let option = '';
+        for (let key in brand) {
+            option += '<option value=" + key + ">' + brand[key] + '</option>';
+        }
+        secondField.innerHTML = option;
+    });
+
+    // returns a brand
+    function getBrand(brand) {
+        if (brand === "super_pro") {
+            return super_pro
+        } else return leone_1947;
+    }
 })();
